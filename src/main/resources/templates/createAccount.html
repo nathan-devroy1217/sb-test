@@ -1,0 +1,19 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Account</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="ISO-8859-1">
+</head>
+<body>
+<h1>Enter Account Details</h1>
+<form id="createAccount" role="form" th:action="@{/web/doCreate}" method="post" th:object="${aNewAccount}">
+    <table>
+        <tr><td>First Name: <input type="text" id="firstname" th:field="${aNewAccount.firstName}" /></td></tr>
+        <tr><td>Last Name: <input type="text" id="lastname" th:field="${aNewAccount.lastName}" /></td></tr>
+        <tr><td>Address: <input type="text" id="address" th:field="${aNewAccount.address}"  /></td></tr>
+        <tr><td>Email: <input type="text" id-="email" th:field="${aNewAccount.email}" /></td></tr>
+        <tr><td><input type="submit" value="Create" /></td></tr>
+    </table>
+</form:form>
+</form>
+</body>
+</html>
